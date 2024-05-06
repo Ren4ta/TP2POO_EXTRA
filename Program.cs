@@ -26,7 +26,18 @@ namespace TP2POO_EXTRA_DOMINGUEZ_MINUCHIN
 
                 break;
 
-                case 2: 
+                case 2:  
+                string nom2,ciudad2; 
+                double peso2, fuerza2, velocidad2;  
+                nom2= IngresarCadena("Ingrese el nombre del súperheroe");
+                ciudad2 = IngresarCadena("Ingrese la ciudad del súperheroe");  
+                peso2 = IngresarPeso(); 
+                fuerza2 = IngresarDoubleEntre1Y100("Ingrese la fuerza"); 
+                velocidad2 = IngresarDoubleEntre1Y100("Ingrese la velocidad");  
+
+                Superheroe superheroe2 = ObtenerSuperheroe(nom2,ciudad2,peso2,velocidad2, fuerza2); 
+                Console.WriteLine("“Se ha creado el superhéroe ”"+ superheroe2.Nombre);
+
                 break;
 
                 case 3:
