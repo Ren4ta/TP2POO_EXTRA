@@ -26,7 +26,7 @@ namespace TP2POO_EXTRA_DOMINGUEZ_MINUCHIN
                 velocidad1 = IngresarDoubleEntre1Y100("Ingrese la velocidad");  
 
                  superheroe1 = ObtenerSuperheroe(nom1,ciudad1,peso1,velocidad1, fuerza1); 
-                Console.WriteLine("“Se ha creado el superhéroe ”"+ superheroe1.Nombre);
+                Console.WriteLine("Se ha creado el superhéroe "+ superheroe1.Nombre);
 
                 break;
 
@@ -40,7 +40,7 @@ namespace TP2POO_EXTRA_DOMINGUEZ_MINUCHIN
                 velocidad2 = IngresarDoubleEntre1Y100("Ingrese la velocidad");  
 
                 superheroe2 = ObtenerSuperheroe(nom2,ciudad2,peso2,velocidad2, fuerza2); 
-                Console.WriteLine("“Se ha creado el superhéroe ”"+ superheroe2.Nombre);
+                Console.WriteLine("Se ha creado el superhéroe "+ superheroe2.Nombre);
 
                 break;
 
@@ -66,22 +66,21 @@ namespace TP2POO_EXTRA_DOMINGUEZ_MINUCHIN
 
                     if (diferencia >= 30)
                     {
-                        Console.WriteLine($"“Ganó {ganador} por amplia diferencia”"); 
+                        Console.WriteLine($"Ganó {ganador} por amplia diferencia"); 
                     } 
                     else if (diferencia >= 10 && diferencia < 30)
                     {
-                        Console.WriteLine($"“Ganó {ganador} ¡Fue muy parejo!”");
+                        Console.WriteLine($"Ganó {ganador} ¡Fue muy parejo!");
                     } 
                     else if (diferencia < 10 && diferencia > 0)
                     {
-                        Console.WriteLine($"“Ganó {ganador} ¡No le sobró nada!”");
+                        Console.WriteLine($"Ganó {ganador} ¡No le sobró nada!");
                     }
                 }
                 break;
 
-            
-
             }
+                 opcion = MostrarMenu();
             }
 
         }  

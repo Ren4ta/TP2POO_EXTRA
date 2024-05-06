@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TP2POO_EXTRA_Dominguez_Minuchin")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a60daa319846db62bf3c2bd7bbb3b8e29b070989")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+03f3156016489041028115fdaf9b828539d99165")]
 [assembly: System.Reflection.AssemblyProductAttribute("TP2POO_EXTRA_Dominguez_Minuchin")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TP2POO_EXTRA_Dominguez_Minuchin")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
