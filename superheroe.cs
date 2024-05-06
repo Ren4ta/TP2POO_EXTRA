@@ -1,11 +1,11 @@
 class Superheroe
 {
-    public string Nombre{get;set;}
-    public string Ciudad{get;set;}
+    public string Nombre{get; private set;}
+    public string Ciudad{get;private set;}
 
-    public double Peso{get;set;}
-     public double Fuerza{get;set;}
-    public double Velocidad{get;set;}
+    public double Peso{get; private set;}
+     public double Fuerza{get; private set;}
+    public double Velocidad{get;private set;}
 
     public Superheroe (string nombre, string ciudad, double peso, double fuerza, double velocidad)
     {
@@ -18,7 +18,9 @@ class Superheroe
 
     public double ObtenerSkill()
     {
-       
+        Random random = new Random (); 
+        int rnd = random.Next(1, 10); 
+       return (Velocidad*0.6)+(Fuerza*0.8)+rnd;
     }
 
 
