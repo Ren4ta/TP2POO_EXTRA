@@ -45,7 +45,7 @@ namespace TP2POO_EXTRA_DOMINGUEZ_MINUCHIN
                 break;
 
                 case 3: 
-                while (superheroe1 != null && superheroe2 != null ) 
+                if (superheroe1 != null && superheroe2 != null ) 
                 {
                     double diferencia = superheroe1.ObtenerSkill() - superheroe2.ObtenerSkill(); 
                     string ganador = "";
