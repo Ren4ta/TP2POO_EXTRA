@@ -9,9 +9,13 @@ namespace TP2POO_EXTRA_DOMINGUEZ_MINUCHIN
         {
             int opcion; 
             opcion = MostrarMenu(); 
+            Superheroe superheroe1 = null; 
+            Superheroe superheroe2 = null;
 
-            switch (opcion)
+            while (opcion != 4) 
             {
+                switch (opcion)
+            { 
                 case 1: 
                 string nom1,ciudad1; 
                 double peso1, fuerza1, velocidad1;  
@@ -21,7 +25,7 @@ namespace TP2POO_EXTRA_DOMINGUEZ_MINUCHIN
                 fuerza1 = IngresarDoubleEntre1Y100("Ingrese la fuerza"); 
                 velocidad1 = IngresarDoubleEntre1Y100("Ingrese la velocidad");  
 
-                Superheroe superheroe1 = ObtenerSuperheroe(nom1,ciudad1,peso1,velocidad1, fuerza1); 
+                 superheroe1 = ObtenerSuperheroe(nom1,ciudad1,peso1,velocidad1, fuerza1); 
                 Console.WriteLine("“Se ha creado el superhéroe ”"+ superheroe1.Nombre);
 
                 break;
@@ -35,17 +39,49 @@ namespace TP2POO_EXTRA_DOMINGUEZ_MINUCHIN
                 fuerza2 = IngresarDoubleEntre1Y100("Ingrese la fuerza"); 
                 velocidad2 = IngresarDoubleEntre1Y100("Ingrese la velocidad");  
 
-                Superheroe superheroe2 = ObtenerSuperheroe(nom2,ciudad2,peso2,velocidad2, fuerza2); 
+                superheroe2 = ObtenerSuperheroe(nom2,ciudad2,peso2,velocidad2, fuerza2); 
                 Console.WriteLine("“Se ha creado el superhéroe ”"+ superheroe2.Nombre);
 
                 break;
 
-                case 3:
+                case 3: 
+                while (superheroe1 != null && superheroe2 != null ) 
+                {
+                    double diferencia = superheroe1.ObtenerSkill() - superheroe2.ObtenerSkill(); 
+                    string ganador = "";
+                    if (diferencia > 0)
+                    {
+                        ganador = superheroe1.Nombre; 
+                        
+                    }  
+                    else if (diferencia < 0)
+                    {
+                        ganador = superheroe2.Nombre; 
+                        diferencia = diferencia * (-1); 
+                    }   
+                    else 
+                    {
+                        Console.WriteLine("Hay empate"); 
+                    }
+
+                    if (diferencia >= 30)
+                    {
+                        Console.WriteLine($"“Ganó {ganador} por amplia diferencia”"); 
+                    } 
+                    else if (diferencia >= 10 && diferencia < 30)
+                    {
+                        Console.WriteLine($"“Ganó {ganador} ¡Fue muy parejo!”");
+                    } 
+                    else if (diferencia < 10 && diferencia > 0)
+                    {
+                        Console.WriteLine($"“Ganó {ganador} ¡No le sobró nada!”");
+                    }
+                }
                 break;
 
-                case 4:
-                break;
+            
 
+            }
             }
 
         }  

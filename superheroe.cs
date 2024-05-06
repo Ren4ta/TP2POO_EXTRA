@@ -13,7 +13,8 @@ class Superheroe
         Ciudad = ciudad; 
         Peso = peso; 
         Fuerza = fuerza; 
-        Velocidad = velocidad; 
+        Velocidad = velocidad;  
+        double skill = ObtenerSkill(); 
     }
 
     public double ObtenerSkill()
